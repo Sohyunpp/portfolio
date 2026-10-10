@@ -476,3 +476,21 @@ figcaption strong{color:var(--ink);font-weight:700}
   .detail-layout{display:block}
   .hero{background:#0a1d3a!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
+
+/* v31: concise homepage collections */
+.capability-details{margin-top:22px;background:#f6f9fd;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.capability-details>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:17px 22px;font-size:15px;font-weight:750;color:var(--blue-ink)}
+.capability-details>summary::-webkit-details-marker{display:none}
+.capability-details>summary::after{content:'+';font-size:23px;font-weight:400;line-height:1}
+.capability-details[open]>summary::after{content:'−'}
+.capability-details[open]>summary{border-bottom:1px solid var(--line)}
+.capability-details .matrix-wrap{margin:0;border:0;border-radius:0}
+.collection-control{display:flex;justify-content:center;margin-top:25px}
+.reveal-button{appearance:none;display:inline-flex;justify-content:center;align-items:center;gap:8px;cursor:pointer;padding:13px 26px;min-width:225px;background:#fff;border:1px solid #b8c9df;border-radius:11px;color:var(--blue-ink);font:750 14.5px/1.4 var(--sans);transition:background .2s,border-color .2s}
+.reveal-button:hover{background:var(--blue-tint);border-color:var(--blue)}
+.reveal-button:focus-visible,.capability-details>summary:focus-visible{outline:3px solid #66a8ed;outline-offset:2px}
+.reveal-button[hidden],.publication-list li[hidden],.publication-list[hidden],.publication-group-heading[hidden]{display:none!important}
+#company-fit .section-intro{max-width:760px}
+#publications .publication-group-heading{margin-top:22px}
+@media(max-width:760px){.capability-details>summary{padding:15px 17px}.collection-control{margin-top:20px}.reveal-button{width:100%;max-width:420px}}
+@media print{.capability-details .matrix-wrap{display:block!important}.publication-list li[hidden],.publication-list[hidden],.publication-group-heading[hidden],.project-card[hidden]{display:block!important}.reveal-button{display:none!important}}
